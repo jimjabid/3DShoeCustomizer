@@ -12,6 +12,12 @@ function Shoe(props)  {
     const {nodes,materials} = useGLTF("/shoe-draco.glb")
     const logoTexture = useTexture(snap.logoDecal)
     const fullTexture = useTexture(snap.fullDecal)
+    // useFrame((state) => {
+    //     const t = state.clock.getElapsedTime()
+    //     group.current.rotation.set(Math.cos(t / 4) / 8, Math.sin(t / 4) / 8, -0.2 - (1 + Math.sin(t / 1.5)) / 20)
+    //     group.current.position.y = (1 + Math.sin(t / 1.5)) / 10
+    //   })
+
   return (
     <group  {...props} dispose={null}>
     <mesh geometry={nodes.shoe.geometry} material={materials.laces} />
