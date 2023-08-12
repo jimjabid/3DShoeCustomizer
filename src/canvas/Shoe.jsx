@@ -20,8 +20,30 @@ function Shoe(props)  {
 
   return (
     <group  {...props} dispose={null}>
+      
+ 
     <mesh geometry={nodes.shoe.geometry} material={materials.laces} />
-    <mesh geometry={nodes.shoe_1.geometry} material={materials.mesh} />
+    <mesh geometry={nodes.shoe_1.geometry} material={materials.mesh} >
+    {snap.isFullTexture && (
+          <Decal 
+            position={[-0.7, -0.25, 0]}
+            rotation={[0, 0, 0]}
+            scale={1}
+            map={fullTexture}
+            depthTest= {false}
+            depthWrite={true}
+          />
+        )}
+            {snap.isLogoTexture && (
+          <Decal position={[-0.5, -0.1, 0.15]}
+          rotation={[0, 0, 0]}
+          scale={0.4}
+          map={logoTexture}
+          depthTest={false}
+          depthWrite={true}/>
+        )}
+    
+    </mesh>
     <mesh geometry={nodes.shoe_2.geometry} material={materials.caps} />
     <mesh geometry={nodes.shoe_3.geometry} material={materials.inner} />
     <mesh geometry={nodes.shoe_4.geometry} material={materials.sole} />
