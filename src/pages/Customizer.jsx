@@ -10,6 +10,7 @@ import { fadeAnimation, slideAnimation } from '../config/motion'
 import { AIPicker, ColorPicker, FilePicker,Tab,CustomButton } from '../components'
 import { Color } from 'three'
 
+
 const Customizer = () => {
   const snap = useSnapshot(state)
 
@@ -27,8 +28,8 @@ const Customizer = () => {
   //show tab content depending on the activeTab
   const generateTabContent = () => {
     switch (activeEditorTab) {
-      case "colorpicker":
-        return <ColorPicker/>
+      // case "colorpicker":
+      //   return <ColorPicker/>
       case "filepicker":
         return <FilePicker/>
       case "aipicker":
@@ -44,8 +45,11 @@ const Customizer = () => {
           <motion.div key="custom"
           className='absolute top-0 left-0 z-10'
           {...slideAnimation("left")}>
+            <ColorPicker/>
             <div className='flex items-center min-h-screen'>
+            
               <div className='editortabs-container tabs'>
+             
                 {EditorTabs.map((tab) =>(
                   <Tab
                   key={tab.name}

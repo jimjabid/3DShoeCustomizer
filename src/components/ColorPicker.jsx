@@ -6,15 +6,22 @@ import state from "../store"
 const ColorPicker = () => {
   const snap = useSnapshot(state);
 
-  return (
-    <div className={`absolute ml-3 ${snap.current ? 'left-full' : 'hidden'}`}>
-      {/* <SketchPicker
-      color={snap.color}
-      disableAlpha
-      onChange={(color) => state.color = color.hex}
+  const handleColorChange = (color) => {
+    if (snap.current) {
+      state.items[snap.current] = color.hex;
+      state.color = color.hex;
+    }
+  };
 
-      /> */}
-      <h1>{snap.current}</h1>
+  return (
+    <div className={`absolute flex top-5 z-10  ml-3 ${snap.current ? 'left-full' : 'hidden'}`}>
+      <SketchPicker
+      color={snap.items[snap.current]}
+      disableAlpha
+      onChange={handleColorChange}
+
+      />
+      <h1 className='xl:text-[10rem]  ml-3 text-[3rem] xl:leading-[11rem] leading-[7rem] font-black text-black xs:mt-[25%] sm:mt-0 uppercase '>{snap.current}</h1>
 
     </div>
     // <div className='absolute left-full ml-3'>
