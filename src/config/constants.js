@@ -1,18 +1,6 @@
-import {
-  swatch,
-  fileIcon,
-  ai,
-  logoShirt,
-  stylishShirt,
-  logoShoe,
-  stylishShoe,
-} from "../assets";
+import { swatch, fileIcon, ai, logoShoe, stylishShoe } from "../assets";
 
 export const EditorTabs = [
-  // {
-  //   name: "colorpicker",
-  //   icon: swatch,
-  // },
   {
     name: "filepicker",
     icon: fileIcon,
@@ -24,20 +12,12 @@ export const EditorTabs = [
 ];
 
 export const FilterTabs = [
-  // {
-  //   name: "logoShirt",
-  //   icon: logoShirt,
-  // },
-  // {
-  //   name: "stylishShirt",
-  //   icon: stylishShirt,
-  // },
   {
     name: "logoShoe",
     icon: logoShoe,
   },
   {
-    name: "stylishShirt",
+    name: "stylishShoe",
     icon: stylishShoe,
   },
 ];
@@ -45,10 +25,10 @@ export const FilterTabs = [
 export const DecalTypes = {
   logo: {
     stateProperty: "logoDecal",
-    filterTab: "logoShirt",
+    filterTab: "logoShoe",
   },
   full: {
     stateProperty: "fullDecal",
-    filterTab: "stylishShirt",
+    filterTab: "stylishShoe",
   },
 };
