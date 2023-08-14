@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef,useState } from 'react'
 
 import { easing } from 'maath'
 import { useSnapshot } from 'valtio'
@@ -12,6 +12,8 @@ function Shoe(props)  {
     const {nodes,materials} = useGLTF("/shoe-draco.glb")
     const logoTexture = useTexture(snap.logoDecal)
     const fullTexture = useTexture(snap.fullDecal)
+    const [hovered, set] = useState(null)
+
     // useFrame((state) => {
     //     const t = state.clock.getElapsedTime()
     //     group.current.rotation.set(Math.cos(t / 4) / 8, Math.sin(t / 4) / 8, -0.2 - (1 + Math.sin(t / 1.5)) / 20)
@@ -19,11 +21,16 @@ function Shoe(props)  {
     //   })
 
   return (
-    <group  {...props} dispose={null}>
+    <group  {...props} dispose={null}
+      onPointerOver={(e) => (e.stopPropagation(), set(e.object.material.name))}
+      onPointerOut={(e) => e.intersections.length === 0 && set(null)}
+      onPointerMissed={() => (state.current = null)}
+      onClick={(e) => (e.stopPropagation(), (state.current = e.object.material.name))}
+    >
       
- 
-    <mesh geometry={nodes.shoe.geometry} material={materials.laces} />
-    <mesh geometry={nodes.shoe_1.geometry} material={materials.mesh} >
+    {console.log(state.current)}
+    <mesh receiveShadow castShadow geometry={nodes.shoe.geometry} material={materials.laces} />
+    <mesh receiveShadow castShadow geometry={nodes.shoe_1.geometry} material={materials.mesh} >
     {snap.isFullTexture && (
           <Decal 
             position={[-0.7, -0.25, 0]}
@@ -44,12 +51,12 @@ function Shoe(props)  {
         )}
     
     </mesh>
-    <mesh geometry={nodes.shoe_2.geometry} material={materials.caps} />
-    <mesh geometry={nodes.shoe_3.geometry} material={materials.inner} />
-    <mesh geometry={nodes.shoe_4.geometry} material={materials.sole} />
-    <mesh geometry={nodes.shoe_5.geometry} material={materials.stripes} />
-    <mesh geometry={nodes.shoe_6.geometry} material={materials.band} />
-    <mesh geometry={nodes.shoe_7.geometry} material={materials.patch} />
+    <mesh receiveShadow castShadow geometry={nodes.shoe_2.geometry} material={materials.caps} />
+    <mesh receiveShadow castShadow geometry={nodes.shoe_3.geometry} material={materials.inner} />
+    <mesh receiveShadow castShadow geometry={nodes.shoe_4.geometry} material={materials.sole} />
+    <mesh receiveShadow castShadow geometry={nodes.shoe_5.geometry} material={materials.stripes} />
+    <mesh receiveShadow castShadow geometry={nodes.shoe_6.geometry} material={materials.band} />
+    <mesh receiveShadow castShadow geometry={nodes.shoe_7.geometry} material={materials.patch} />
   </group>
   )
 }

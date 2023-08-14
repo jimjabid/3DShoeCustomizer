@@ -5,5 +5,16 @@ import download from "./download.png";
 
 import logoShirt from "./logo-tshirt.png";
 import stylishShirt from "./stylish-tshirt.png";
+import logoShoe from "./shoe-logo.png";
+import stylishShoe from "./shoe-full-decal.png";
 
-export { ai, fileIcon, swatch, download, logoShirt, stylishShirt };
+export {
+  ai,
+  fileIcon,
+  swatch,
+  download,
+  logoShirt,
+  stylishShirt,
+  logoShoe,
+  stylishShoe,
+};
