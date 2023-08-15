@@ -2,11 +2,23 @@ import React, { useRef } from 'react'
 import {easing} from "maath"
 import { useFrame } from '@react-three/fiber'
 import { AccumulativeShadows, RandomizedLight } from '@react-three/drei'
-
+import { useSnapshot } from 'valtio'
+import state from '../store'
 
 
 function Backdrop() {
   const shadows = useRef();
+  const snap = useSnapshot(state);
+
+  
+  useFrame((state, delta) =>
+    easing.dampC(
+      shadows.current.getMesh().material.color,
+      snap.color,
+      0.25,
+      delta
+    )
+  )
   return (
     <AccumulativeShadows 
     ref={shadows}
@@ -15,7 +27,7 @@ function Backdrop() {
     alphaTest={0.85}
     scale={10}
     rotation={[Math.PI / 2,0,0]}
-   position={[0,0,-0.5]}
+    position={[0,0,-0.5]}
     >
       <RandomizedLight
       amount={4}
