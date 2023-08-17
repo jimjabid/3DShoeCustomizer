@@ -14,7 +14,8 @@ const ColorPicker = () => {
   };
 
   return (
-    <div className={`absolute flex top-5 z-10  ml-3 ${snap.current ? 'left-full' : 'hidden'}`}>
+              
+    <div className={`absolute flex top-5 z-10  ml-3 ${snap.current ? 'left-[0.1rem]' : 'hidden'}`}>
       <SketchPicker
       color={snap.items[snap.current]}
       disableAlpha
@@ -22,18 +23,9 @@ const ColorPicker = () => {
 
       />
       <h1 className='xl:text-[10rem]  ml-3 text-[3rem] xl:leading-[11rem] leading-[7rem] font-black text-black xs:mt-[25%] sm:mt-0 uppercase '>{snap.current}</h1>
-
+      
     </div>
-    // <div className='absolute left-full ml-3'>
-    //   <SketchPicker
-    //   color={snap.color}
-    //   disableAlpha
-    //   onChange={(color) => state.color = color.hex}
-
-    //   />
-
-
-    // </div>
+  
   )
 }
 
