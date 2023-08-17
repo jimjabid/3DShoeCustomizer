@@ -7,17 +7,14 @@ import {download} from "../assets"
 import {downloadCanvasToImage, reader} from "../config/helpers"
 import {EditorTabs,FilterTabs,DecalTypes} from "../config/constants"
 import { fadeAnimation, slideAnimation } from '../config/motion'
-import { AIPicker, ColorPicker, FilePicker,Tab,CustomButton } from '../components'
-import { Color } from 'three'
+import {  ColorPicker, FilePicker,Tab,CustomButton, Instructions } from '../components'
+
 
 
 const Customizer = () => {
   const snap = useSnapshot(state)
 
   const [file,setFile] = useState("");
-
-  const [prompt,setPrompt] = useState ("");
-  const [generatingImg, setGeneratingImg] = useState(false);
 
   const [activeEditorTab, setActiveEditorTab] = useState("");
   const [activeFilterTab, setActiveFilterTab] = useState({
@@ -34,13 +31,13 @@ const Customizer = () => {
         setFile ={setFile}
         readFile ={readFile}
         />
-      case "aipicker":
-        return <AIPicker/>
+      
       default:
         return null;
     }
   }
 
+  
   const handleDecals = (type,result) =>{
     const decalType = DecalTypes[type];
 
@@ -91,6 +88,8 @@ const Customizer = () => {
           className='absolute top-0 left-0 z-10'
           {...slideAnimation("left")}>
             <ColorPicker/>
+            <Instructions/>
+
             <div className='flex items-center min-h-screen'>
             
               <div className='editortabs-container tabs'>
@@ -104,8 +103,11 @@ const Customizer = () => {
                 )                  
                 )}
                 {generateTabContent()}
+                
               </div>
+              
             </div>
+            
           </motion.div>
           <motion.div
           className='absolute top-5 right-5 z-10'
@@ -117,6 +119,7 @@ const Customizer = () => {
             handleClick={() => state.intro= true}
 
             />
+
           </motion.div>
           <motion.div className='filtertabs-container'
           {...slideAnimation("up")}>

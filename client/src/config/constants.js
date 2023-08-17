@@ -1,13 +1,9 @@
-import { swatch, fileIcon, ai, logoShoe, stylishShoe } from "../assets";
+import { swatch, fileIcon, logoShoe, stylishShoe } from "../assets";
 
 export const EditorTabs = [
   {
     name: "filepicker",
     icon: fileIcon,
-  },
-  {
-    name: "aipicker",
-    icon: ai,
   },
 ];
 
