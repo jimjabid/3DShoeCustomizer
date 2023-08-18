@@ -26,7 +26,7 @@ function Shoe(props)  {
     }, [hovered])
 
     // useFrame((state, delta) => easing.dampC(materials.laces.color, snap.items[snap.current], 0.25, delta));
-
+    
      
 
   return (

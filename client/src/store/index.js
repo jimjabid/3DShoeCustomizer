@@ -13,7 +13,7 @@ const state = proxy({
     patch: "#fff",
   },
   intro: true,
-  color: "#c6d4ec b",
+  color: "#c6d4ec",
   isLogoTexture: true,
   isFullTexture: false,
   logoDecal: "./threejs.png",

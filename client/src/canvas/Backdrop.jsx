@@ -11,7 +11,7 @@ function Backdrop() {
   const snap = useSnapshot(state);
 
   
-  useFrame((state, delta) =>
+  useFrame((_, delta) =>
     easing.dampC(
       shadows.current.getMesh().material.color,
       snap.color,
@@ -25,7 +25,7 @@ function Backdrop() {
     //temporal
     frames={60}
     alphaTest={0.85}
-    scale={10}
+    scale={100}
     rotation={[Math.PI / 2,0,0]}
     position={[0,0,-0.5]}
     >

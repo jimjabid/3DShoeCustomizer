@@ -7,7 +7,7 @@ import {download} from "../assets"
 import {downloadCanvasToImage, reader} from "../config/helpers"
 import {EditorTabs,FilterTabs,DecalTypes} from "../config/constants"
 import { fadeAnimation, slideAnimation } from '../config/motion'
-import {  ColorPicker, FilePicker,Tab,CustomButton, Instructions } from '../components'
+import {  ColorPicker, FilePicker,Tab,CustomButton, } from '../components'
 
 
 
@@ -88,7 +88,7 @@ const Customizer = () => {
           className='absolute top-0 left-0 z-10'
           {...slideAnimation("left")}>
             <ColorPicker/>
-            <Instructions/>
+            {/* <Instructions/> */}
 
             <div className='flex items-center min-h-screen'>
             
