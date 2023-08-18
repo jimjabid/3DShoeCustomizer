@@ -8,7 +8,7 @@ import { easing } from 'maath'
 function Shoe(props)  {
     const snap = useSnapshot(state);
 
-    const {nodes,materials} = useGLTF("/shoe-draco.glb")
+    const {nodes,materials} = useGLTF("./shoe-draco.glb")
     const logoTexture = useTexture(snap.logoDecal)
     const fullTexture = useTexture(snap.fullDecal)
     const [hovered, set] = useState(null)
