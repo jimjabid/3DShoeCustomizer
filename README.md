@@ -18,8 +18,8 @@ This project is a 3D shoe customizer that allows users to create unique shoe des
 1. Clone this repository to your local machine:
 
 ```
-git clone https://github.com/your-username/3d-shoe-customizer.git
-cd 3d-shoe-customizer
+git clone https://github.com/jimjabid/3DShoeCustomizer.git
+cd 3DShoeCustomizer
 ```
 
 ## Install dependencies:
