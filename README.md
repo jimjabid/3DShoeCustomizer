@@ -1,8 +1,50 @@
-# React + Vite
+# 3D Shoe Customizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![3D Shoe Customizer](./public/readme-shoe-cust.png)
 
-Currently, two official plugins are available:
+This project is a 3D shoe customizer that allows users to create unique shoe designs. It's built with React, React Three Fiber, React Drei, Framer Motion, and Valtio for state management, using Vite for fast development.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Dependencies
+
+- [Vite](https://vitejs.dev/): A build tool for the project.
+- [React](https://reactjs.org/): A JavaScript library for building user interfaces.
+- [React Three Fiber](https://github.com/pmndrs/react-three-fiber): A React renderer for Three.js.
+- [React Drei](https://github.com/pmndrs/drei): A collection of useful helpers for React Three Fiber.
+- [Framer Motion](https://www.framer.com/motion/): A library for animations in React.
+- [Valtio](https://github.com/pmndrs/valtio): A state management library for React.
+
+## How to Run
+
+1. Clone this repository to your local machine:
+
+```
+git clone https://github.com/your-username/3d-shoe-customizer.git
+cd 3d-shoe-customizer
+```
+
+## Install dependencies:
+
+```
+npm install
+```
+
+## Start the development server:
+
+```
+npm run dev
+```
+
+Open your browser and navigate to http://localhost:5173 to use the 3D shoe customizer.
+
+## Features
+
+Customize 3D shoe designs with ease.
+Stunning visuals powered by React Three Fiber.
+Smooth animations and transitions with Framer Motion.
+State management with Valtio.
+Responsive and efficient styling using React Drei.
+Contributions
+Contributions are welcome! If you have ideas or improvements to suggest, please open issues or submit pull requests. Your feedback and enhancements are highly appreciated.
+
+License
+This project is licensed under the MIT License.
