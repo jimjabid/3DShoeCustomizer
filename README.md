@@ -42,8 +42,9 @@ Customize 3D shoe designs with ease.
 Stunning visuals powered by React Three Fiber.
 Smooth animations and transitions with Framer Motion.
 State management with Valtio.
-Responsive and efficient styling using React Drei.
-Contributions
+
+## Contributions
+
 Contributions are welcome! If you have ideas or improvements to suggest, please open issues or submit pull requests. Your feedback and enhancements are highly appreciated.
 
 License
