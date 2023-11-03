@@ -104,7 +104,7 @@ export default function PlugDevRev() {
             <div className="waving-palm">
               <span role="img" aria-label="Hi">
                 {" "}
-                &#x270B;&#x1F3FE;
+                &#x2753;
               </span>
             </div>
           </motion.div>
