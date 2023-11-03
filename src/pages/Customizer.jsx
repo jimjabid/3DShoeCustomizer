@@ -8,6 +8,7 @@ import {downloadCanvasToImage, reader} from "../config/helpers"
 import {EditorTabs,FilterTabs,DecalTypes} from "../config/constants"
 import { fadeAnimation, slideAnimation } from '../config/motion'
 import {  ColorPicker, FilePicker,Tab,CustomButton, } from '../components'
+import PlugDevRev from '../components/PlugDevRev'
 
 
 
@@ -132,6 +133,9 @@ const Customizer = () => {
               handleClick={() => handleActiveFilterTab(tab.name) }
               />
             ))}
+          </motion.div>
+          <motion.div>
+            <PlugDevRev/>
           </motion.div>
         </>
       )}

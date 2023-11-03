@@ -90,3 +90,58 @@ input[type="file"] {
 .sketch-picker > div:nth-child(3) {
   display: none !important;
 }
+
+/* Dev rev styles */
+
+.custom-launcher-selector {
+  width: 80px;
+  height: 80px;
+  background: #efeded;
+  bottom: 50px;
+  right: 40px;
+  margin: 20px;
+  position: fixed;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.waving-palm {
+  animation: wave 2s infinite;
+  font-size: 1.5rem;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.spacing-container-styles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-text-styles {
+  font-size: 48px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.typing-dots-styles {
+  animation: typing 1s infinite;
+}
